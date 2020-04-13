@@ -33,3 +33,17 @@ double GetTemp()
   return (t);
 }
 ```
+
+AVR chips que tienen internal temperatura sensor
+
+* ATmega8 : No
+* ATmega8L : No
+* ATmega8A : No
+* ATmega168 : No
+* ATmega168A : Yes
+* ATmega168P : Yes
+* ATmega328 : Yes
+* ATmega328P : Yes
+* ATmega1280 (Arduino Mega) : No
+* ATmega2560 (Arduino Mega 2560) : No
+* ATmega32U4 (Arduino Leonardo) : Yes
