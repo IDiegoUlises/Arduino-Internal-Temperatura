@@ -1,6 +1,6 @@
 # Arduino Internal Temperatura
 
-La mayoría de los nuevos chips AVR (utilizados en el Arduino) tienen un sensor de temperatura interno. No se usa con frecuencia, ya que no es precisa. Sin embargo, hay una serie de situaciones en las que se puede utilizar este sensor.
+La mayoria de los nuevos chips AVR (utilizados en el Arduino) tienen un sensor de temperatura interno. No se usa con frecuencia, ya que no es precisa. Sin embargo, hay una serie de situaciones en las que se puede utilizar este sensor.
 
 
 ```c++
