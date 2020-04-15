@@ -2,7 +2,7 @@
 
 La mayoria de los nuevos chips AVR (utilizados en el Arduino) incorpora un sensor de temperatura interno a dentro del chip mide la temperatura del microcontrolador y no del ambiente externo este se utiliza como una medicion donde se utiliza para evitar un sobrecalentamiento o enfriamento en condiciones extremas.  
 
-
+**Obtener la temperatura del microcontrolador**
 ```c++
 double GetTemp()
 {
@@ -22,7 +22,7 @@ double GetTemp()
 }
 ```
 
-AVR chips que tienen internal temperatura sensor
+**AVR chips que tienen internal temperatura sensor**
 
 * ATmega8 : No
 * ATmega8L : No
@@ -39,20 +39,15 @@ AVR chips que tienen internal temperatura sensor
 ## Rango de temperatura del Arduino
 **Rango de temperatura del Arduino es de -40º a 85 grados centigrados**
 
-Sin embargo, hay algunas cosas que pueden salir mal:
+* La EEPROM podria no almacenarse tanto tiempo en temperaturas extremas, tenga esto en cuenta si esta almacenando datos criticos.
 
-* La EEPROM podría no almacenarse tanto tiempo en temperaturas extremas. Tenga esto en cuenta si está almacenando datos críticos.
+* El regulador de voltaje puede no funcionar adecuadamente en condiciones de calor.
 
-* El regulador de voltaje puede no funcionar tan bien en condiciones de calor.
+* El oscilador de cristal puede no producir una frecuencia exacta. Sin embargo, unos pocos hercios mas o menos no afectarian a un procesador de 16 MHz. La tolerancia es en realidad un poco menos del 1%. Es posible que tenga algunos problemas con el puerto serie (la velocidad en baudios no sera la correcta) cualquier comunicación como I2C funcionara de manera desincronizadas.
 
-* El oscilador de cristal puede no producir valores exactos. Sin embargo, me imagino que unos pocos hercios más o menos no afectarían a un procesador de 16 MHz. La tolerancia es en realidad un poco menos del 1%. Es posible que tenga algunos problemas con la serie (la velocidad en baudios no es correcta). Me gustaría ver en cualquier comunicación como I2C también. (No sé exactamente cómo funciona la línea del reloj ... podría estar bien para I2C).
+* Las resistencias y condensadores pueden producir los valores no exactos, la tolerancia sera superior al 8%, en resistencias tienen una tolerancia de 5% para temperaturas normales, los condensadores tendrian una mayor tolerancia si aumenta su temperatura lo que puede producir valores del 8% inexactos.
 
-* Las resistencias / condensadores pueden no producir los valores exactos . Me imagino que la tolerancia no será superior al 8% en resistencias: la mayoría de las resistencias tienen una clasificación de 5% para temperaturas normales. Depende del fabricante. Los condensadores tienen una mayor tolerancia, pero su objetivo principal es "suavizar" una señal.
+* El enfriamiento y calentamiento extremo puede causar problemas menores de expansión.(está bien de vez en cuando, pero no cada hora disminuyendo 30 grados centigrados).
 
-* El enfriamiento / calentamiento extremo puede causar problemas menores de expansión. (Nota: está bien de vez en cuando, pero no cada hora bajando 30 grados).
+Por lo tanto, siempre que todos los demas componentes que no estan en la placa arduino funcionen con la temperatura que correspondiente, deberia estar bien. Ademas
 
-* También se deben tener en cuenta otros componentes (LCD, etc.) cuando se observa la viabilidad de mantenerlo al aire libre.
-
-por lo tanto, siempre que todos los demás componentes que no están en la placa funcionen con la temperatura que necesita, debería estar bien. Además, como con toda la ingeniería, los valores a menudo tienen un "relleno" incorporado (es decir, la tolerancia del 5% es a menudo del 3-4%, el máximo de 12V puede ejecutarse en 12.5V, etc.)
-
-Lo que quiero decir con eso es que tu Arduino no explotará cuando esté a -41 grados C. No es bueno para eso, pero lo más probable es que estés bien siempre y cuando no sea algo habitual.
