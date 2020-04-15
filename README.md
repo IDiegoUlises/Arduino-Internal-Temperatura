@@ -4,17 +4,6 @@ La mayoria de los nuevos chips AVR (utilizados en el Arduino) incorpora un senso
 
 
 ```c++
-void setup()
-{
-  Serial.begin(9600);
-  Serial.println("Internal Temperatura Sensor");
-  Serial.println(GetTemp());
-}
-
-void loop()
-{
-}
-
 double GetTemp()
 {
   unsigned int wADC;
