@@ -37,7 +37,7 @@ double GetTemp()
 * ATmega32U4 (Arduino Leonardo) : Yes
 
 ## Rango de temperatura del Arduino
-```Rango de temperatura del Arduino es de -40º a 85 grados centigrados```
+```El rango de temperatura del Arduino es de -40º a 85 grados centigrados```
 
 * La EEPROM podria no almacenarse tanto tiempo en temperaturas extremas, tenga esto en cuenta si esta almacenando datos criticos.
 
