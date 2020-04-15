@@ -17,7 +17,7 @@ double GetTemp()
   wADC = ADCW;
  //Convierte a grados Celcius
   t = (wADC - 324.31 ) / 1.22;
-  //Devuelve la temperatura
+ //Devuelve la temperatura
   return (t);
 }
 ```
@@ -37,7 +37,8 @@ AVR chips que tienen internal temperatura sensor
 * ATmega32U4 (Arduino Leonardo) : Yes
 
 ## Rango de temperatura del Arduino
-* Rango de temperatura de -40º a 85 grados centigrados
+**Rango de temperatura del Arduino es de -40º a 85 grados centigrados**
+
 Sin embargo, hay algunas cosas que pueden salir mal:
 
 * La EEPROM podría no almacenarse tanto tiempo en temperaturas extremas. Tenga esto en cuenta si está almacenando datos críticos.
@@ -52,6 +53,6 @@ Sin embargo, hay algunas cosas que pueden salir mal:
 
 * También se deben tener en cuenta otros componentes (LCD, etc.) cuando se observa la viabilidad de mantenerlo al aire libre.
 
-por lo tanto, siempre que todos los demás componentes que no están en la placa funcionen con la temperatura que necesita, debería estar bien. Además, como con toda la ingeniería, los valores a menudo tienen un "relleno" incorporado (es decir, la tolerancia del 5% es a menudo del 3-4%, el máximo de 12V puede ejecutarse en 12.5V, etc.) *
+por lo tanto, siempre que todos los demás componentes que no están en la placa funcionen con la temperatura que necesita, debería estar bien. Además, como con toda la ingeniería, los valores a menudo tienen un "relleno" incorporado (es decir, la tolerancia del 5% es a menudo del 3-4%, el máximo de 12V puede ejecutarse en 12.5V, etc.)
 
-* Lo que quiero decir con eso es que tu Arduino no explotará cuando esté a -41 grados C. No es bueno para eso, pero lo más probable es que estés bien siempre y cuando no sea algo habitual.
+Lo que quiero decir con eso es que tu Arduino no explotará cuando esté a -41 grados C. No es bueno para eso, pero lo más probable es que estés bien siempre y cuando no sea algo habitual.
