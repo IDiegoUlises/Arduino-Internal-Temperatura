@@ -22,7 +22,7 @@ double GetTemp()
 }
 ```
 
-**AVR chips que tienen internal temperatura sensor**
+**AVR chips que incorporan un sensor de temperatura
 
 * ATmega8 : No
 * ATmega8L : No
