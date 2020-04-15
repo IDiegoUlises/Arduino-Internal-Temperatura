@@ -39,15 +39,15 @@ double GetTemp()
 ## Temperatura en el Arduino
 ```El rango de temperatura del Arduino es de -40º a 85 grados centigrados```
 
-* La EEPROM podria no almacenarse tanto tiempo en temperaturas extremas, tenga esto en cuenta si esta almacenando datos criticos.
+* La EEPROM podria no guardar datos durante tiempos prolongados con temperaturas extremas, tenga esto en cuenta si esta almacenando datos criticos.
 
 * El regulador de voltaje puede no funcionar adecuadamente en condiciones de calor.
 
-* El oscilador de cristal puede no producir una frecuencia exacta. Sin embargo, unos pocos hercios mas o menos no afectarian a un procesador de 16 MHz. La tolerancia es del 1% es posible que tenga algunos problemas con el puerto serie (la velocidad en baudios no sera la correcta) cualquier comunicación como I2C funcionara de manera desincronizadas.
+* El oscilador de cristal puede no producir una frecuencia exacta. Sin embargo, unos pocos hercios mas o menos no afectarian a un procesador de 16 MHz. La tolerancia es del 1% es posible que tenga algunos problemas con el puerto serie (la velocidad en baudios no sera la correcta) cualquier comunicación como I2C funcionaria de manera desincronizadas.
 
 * Las resistencias y condensadores pueden producir los valores no exactos, la tolerancia sera superior al 8%, en resistencias tienen una tolerancia de 5% para temperaturas normales, los condensadores tendrian una mayor tolerancia si aumenta su temperatura lo que puede producir valores del 8% inexactos.
 
 * El enfriamiento y calentamiento extremo puede causar problemas menores de expansión.(está bien de vez en cuando, pero no cada hora disminuyendo 30 grados centigrados).
 
-Por lo tanto, siempre que todos los demas componentes que no estan en la placa arduino funcionen con la temperatura que correspondiente, deberia estar bien. Ademas
+Por lo tanto, siempre que todos los demas componentes que no estan en la placa arduino funcionen con la temperatura que correspondiente, deberia estar bien.
 
