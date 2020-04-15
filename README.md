@@ -43,7 +43,7 @@ double GetTemp()
 
 * El regulador de voltaje puede no funcionar adecuadamente en condiciones de calor.
 
-* El oscilador de cristal puede no producir una frecuencia exacta. Sin embargo, unos pocos hercios mas o menos no afectarian a un procesador de 16 MHz. La tolerancia es en realidad un poco menos del 1%. Es posible que tenga algunos problemas con el puerto serie (la velocidad en baudios no sera la correcta) cualquier comunicación como I2C funcionara de manera desincronizadas.
+* El oscilador de cristal puede no producir una frecuencia exacta. Sin embargo, unos pocos hercios mas o menos no afectarian a un procesador de 16 MHz. La tolerancia es de del 1% es posible que tenga algunos problemas con el puerto serie (la velocidad en baudios no sera la correcta) cualquier comunicación como I2C funcionara de manera desincronizadas.
 
 * Las resistencias y condensadores pueden producir los valores no exactos, la tolerancia sera superior al 8%, en resistencias tienen una tolerancia de 5% para temperaturas normales, los condensadores tendrian una mayor tolerancia si aumenta su temperatura lo que puede producir valores del 8% inexactos.
 
