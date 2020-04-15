@@ -15,10 +15,8 @@ double GetTemp()
   ADCSRA |= _BV(ADSC);
   while (bit_is_set(ADCSRA, ADSC));
   wADC = ADCW;
-
-  //Convierte a grados Celcius
+ //Convierte a grados Celcius
   t = (wADC - 324.31 ) / 1.22;
-
   //Devuelve la temperatura
   return (t);
 }
