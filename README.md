@@ -46,6 +46,8 @@ AVR chips que tienen internal temperatura sensor
 * ATmega328 : Yes
 * ATmega328P : Yes
 * ATmega1280 (Arduino Mega) : No
+* ATmega2560 (Arduino Mega 2560) : No
+* ATmega32U4 (Arduino Leonardo) : Yes
 
 ## Rango de temperatura del Arduino
 * Rango de temperatura de -40º a 85 grados centigrados
@@ -66,5 +68,3 @@ Sin embargo, hay algunas cosas que pueden salir mal:
 por lo tanto, siempre que todos los demás componentes que no están en la placa funcionen con la temperatura que necesita, debería estar bien. Además, como con toda la ingeniería, los valores a menudo tienen un "relleno" incorporado (es decir, la tolerancia del 5% es a menudo del 3-4%, el máximo de 12V puede ejecutarse en 12.5V, etc.) *
 
 * Lo que quiero decir con eso es que tu Arduino no explotará cuando esté a -41 grados C. No es bueno para eso, pero lo más probable es que estés bien siempre y cuando no sea algo habitual.
-* ATmega2560 (Arduino Mega 2560) : No
-* ATmega32U4 (Arduino Leonardo) : Yes
